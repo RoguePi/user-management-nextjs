@@ -38,7 +38,7 @@ export async function getUsers(): Promise<User[]> {
 export async function createUser(userData: Omit<User, 'id'>): Promise<User> {
   const users = await getUsers();
   const newUser: User = {
-    id: Math.max(...users.map(u => u.id), 0) + 1,
+    id: users.length + 1,
     ...userData
   };
   

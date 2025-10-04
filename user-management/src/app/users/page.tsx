@@ -79,7 +79,7 @@ export default function Users() {
       <div className="max-w-6xl mx-auto">
         {/* Notification */}
         {notification && (
-          <div className={`fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 p-4 rounded-lg shadow-lg z-50 ${
+          <div className={`fixed top-20 left-1/2 transform -translate-x-1/2 p-4 rounded-lg shadow-lg z-50 ${
             notification.type === 'success' ? 'bg-green-500' : 'bg-red-500'
           } text-white`}>
             <div className="flex items-center">
@@ -116,7 +116,7 @@ export default function Users() {
           </div>
           <button 
             onClick={() => setShowModal(true)}
-            className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-400 to-indigo-500 text-white font-light rounded-lg hover:shadow-lg hover:shadow-blue-300/25 transition-all duration-300 text-sm"
+            className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-400 to-indigo-500 text-white font-light rounded-lg hover:shadow-lg hover:shadow-blue-300/25 active:scale-95 active:shadow-md transition-all duration-300 text-sm"
           >
             <svg className="w-3.5 h-3.5 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Link from "next/link";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -45,13 +46,13 @@ export default function RootLayout({
                     UserHub
                   </h1>
                   <p className="text-xs text-slate-300 font-light">
-                    Management
+                    User Management
                   </p>
                 </div>
               </div>
             </div>
             <nav className="p-4 space-y-2">
-              <a
+              <Link
                 href="/"
                 className="group flex items-center space-x-3 px-3 py-2.5 rounded-xl hover:bg-slate-600/50 transition-all duration-300"
               >
@@ -68,8 +69,8 @@ export default function RootLayout({
                 <span className="text-sm font-light text-slate-200 group-hover:text-white transition-colors">
                   Dashboard
                 </span>
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/users"
                 className="group flex items-center space-x-3 px-3 py-2.5 rounded-xl hover:bg-slate-600/50 transition-all duration-300"
               >
@@ -86,7 +87,7 @@ export default function RootLayout({
                 <span className="text-sm font-light text-slate-200 group-hover:text-white transition-colors">
                   Users
                 </span>
-              </a>
+              </Link>
             </nav>
           </aside>
           <main className="flex-1 overflow-auto bg-gradient-to-br from-white to-blue-50/30">
