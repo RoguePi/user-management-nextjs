@@ -228,28 +228,5 @@
       "catchPhrase": "Centralized empowering task-force",
       "bs": "target end-to-end models"
     }
-  },
-  {
-    "id": 11,
-    "name": "Rogelyn Encinas Pizon",
-    "username": "rogelynpizon",
-    "email": "rogelynpizon@gmail.com",
-    "phone": "09659846751",
-    "website": "JobTarget.ph",
-    "address": {
-      "street": "Pahina Central, Colon Street, Cebu City, Philippines",
-      "suite": "City Dormitory",
-      "city": "Cebu City",
-      "zipcode": "6000",
-      "geo": {
-        "lat": "2° 29' E",
-        "lng": "47° 55' W"
-      }
-    },
-    "company": {
-      "name": "Skandinavisk Logistiks A/S",
-      "catchPhrase": "Work life balance",
-      "bs": "Warehousing"
-    }
   }
 ]
