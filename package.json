@@ -1,5 +1,14 @@
 {
+  "name": "user-management-nextjs",
+  "version": "1.0.0",
+  "description": "A lightweight user management system built with Next.js",
   "scripts": {
-    "dev": "cd user-management & npm run dev"
-  }
+    "dev": "cd user-management && npm run dev",
+    "build": "cd user-management && npm run build",
+    "start": "cd user-management && npm run start",
+    "install-deps": "cd user-management && npm install"
+  },
+  "keywords": ["nextjs", "user-management", "dashboard", "react"],
+  "author": "Rogelyn Pizon",
+  "license": "MIT"
 }
