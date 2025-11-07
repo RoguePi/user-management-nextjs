@@ -57,6 +57,7 @@ user-management-nextjs/
 │   │       └── users.json          # User data storage
 │   └── package.json
 ├── package.json                    # Root package.json
+├── vercel.json                     # Vercel config
 └── README.md
 ```
 
@@ -76,6 +77,49 @@ user-management-nextjs/
 
 - `GET /api/users` - Fetch all users
 - `POST /api/users` - Create a new user
+
+## 🚀 Deployment
+
+### GitHub Setup
+
+1. **Initialize Git:**
+```bash
+git init
+git add .
+git commit -m "Initial commit: User Management System"
+```
+
+2. **Create GitHub Repository:**
+- Go to GitHub and create a new repository named `user-management-nextjs`
+
+3. **Push to GitHub:**
+```bash
+git remote add origin https://github.com/yourusername/user-management-nextjs.git
+git branch -M main
+git push -u origin main
+```
+
+### Vercel Deployment
+
+1. **Connect to Vercel:**
+   - Go to [vercel.com](https://vercel.com)
+   - Sign in with your GitHub account
+   - Click "New Project"
+   - Import your `user-management-nextjs` repository
+
+2. **Configure Build Settings:**
+   - Framework Preset: **Next.js**
+   - Build Command: `cd user-management && npm run build`
+   - Output Directory: `user-management/.next`
+   - Install Command: `cd user-management && npm install`
+
+3. **Deploy:**
+   - Click "Deploy"
+   - Your app will be live at `https://your-project-name.vercel.app`
+
+### Environment Setup
+
+No environment variables needed - the app uses file-based JSON storage.
 
 ## 🛠️ Built With
 

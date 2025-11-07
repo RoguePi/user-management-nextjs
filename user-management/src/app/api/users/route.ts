@@ -2,6 +2,25 @@ import { NextRequest, NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
 
+export async function GET() {
+  try {
+    const filePath = path.join(
+      process.cwd(),
+      "public",
+      "jsonUsersData",
+      "users.json"
+    );
+    const fileContents = fs.readFileSync(filePath, "utf8");
+    const users = JSON.parse(fileContents);
+    return NextResponse.json(users);
+  } catch {
+    return NextResponse.json(
+      { error: "Failed to fetch users" },
+      { status: 500 }
+    );
+  }
+}
+
 export async function POST(request: NextRequest) {
   try {
     const userData = await request.json();
@@ -27,7 +46,7 @@ export async function POST(request: NextRequest) {
     fs.writeFileSync(filePath, JSON.stringify(users, null, 2));
 
     return NextResponse.json(newUser);
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: "Failed to create user" },
       { status: 500 }
