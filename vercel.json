@@ -1,11 +1,7 @@
 {
-  "buildCommand": "cd user-management && npm run build",
-  "outputDirectory": "user-management/.next",
-  "installCommand": "cd user-management && npm install",
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "installCommand": "npm install",
   "framework": "nextjs",
-  "functions": {
-    "user-management/src/app/api/**/*.ts": {
-      "runtime": "nodejs18.x"
-    }
-  }
+  "rootDirectory": "user-management"
 }
