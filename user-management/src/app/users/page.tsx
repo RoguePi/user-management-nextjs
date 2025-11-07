@@ -16,7 +16,7 @@ export default function Users() {
       try {
         const userData = await getUsers();
         setUsers(userData);
-      } catch (err) {
+      } catch {
         setNotification({ message: 'Failed to load users', type: 'error' });
       } finally {
         setLoading(false);
@@ -63,7 +63,7 @@ export default function Users() {
       setUsers(prev => [...prev, newUser]);
       setShowModal(false);
       setNotification({ message: 'User created successfully!', type: 'success' });
-    } catch (error) {
+    } catch {
       setNotification({ message: 'Failed to create user', type: 'error' });
     }
   };
@@ -404,7 +404,7 @@ export default function Users() {
                     </div>
                     <div className="bg-slate-50/50 p-4 rounded-xl">
                       <p className="text-xs text-slate-500 font-light mb-1">Catch Phrase</p>
-                      <p className="text-slate-700 italic">"{selectedUser.company.catchPhrase}"</p>
+                      <p className="text-slate-700 italic">&ldquo;{selectedUser.company.catchPhrase}&rdquo;</p>
                     </div>
                     <div className="bg-slate-50/50 p-4 rounded-xl">
                       <p className="text-xs text-slate-500 font-light mb-1">Business</p>

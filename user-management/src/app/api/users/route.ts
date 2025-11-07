@@ -27,7 +27,7 @@ export async function POST(request: NextRequest) {
     fs.writeFileSync(filePath, JSON.stringify(users, null, 2));
 
     return NextResponse.json(newUser);
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: "Failed to create user" },
       { status: 500 }
